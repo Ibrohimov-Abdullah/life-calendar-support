@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — Life Calendar</title>
-    <meta name="description" content="Get help and support for Life Calendar app.">
+    <meta name="description" content="Get help with Life Calendar: contact support, find answers to common questions, and learn how to delete your data.">
+    <meta name="theme-color" content="#020617">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236366f1'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3ELC%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Space Grotesk', sans-serif; }</style>
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .chev { transform: rotate(180deg); }
+    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
 
@@ -19,46 +28,90 @@
                 </div>
                 <span class="font-bold text-lg tracking-tight">Life Calendar</span>
             </a>
-            <nav class="flex items-center space-x-6 text-sm font-medium text-slate-300">
+            <nav class="flex items-center space-x-5 sm:space-x-8 text-sm font-medium text-slate-300">
                 <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="support.html" class="text-white">Support</a>
+                <a href="support.html" class="text-white" aria-current="page">Support</a>
                 <a href="privacy.html" class="hover:text-white transition">Privacy</a>
             </nav>
         </div>
     </header>
 
     <main class="max-w-3xl mx-auto px-6 py-20">
-        <h1 class="text-4xl font-bold tracking-tight mb-6">Support Center</h1>
-        <p class="text-slate-400 text-lg mb-12">Need help with Life Calendar? We are here to assist you with any questions or issues.</p>
+        <h1 class="text-4xl font-bold tracking-tight mb-6">Support</h1>
+        <p class="text-slate-400 text-lg mb-12">Need help with Life Calendar? Find quick answers below, or email us directly.</p>
 
         <div class="space-y-8">
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
-                <h2 class="text-xl font-semibold mb-3">Contact Support</h2>
-                <p class="text-slate-400 text-sm mb-6">If you encounter any bugs, have feature requests, or need assistance with your account, please reach out to us directly via email.</p>
-                <div class="inline-flex items-center space-x-3 bg-slate-800/80 border border-slate-700/60 px-5 py-3 rounded-2xl text-indigo-400 font-medium">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    <span>support@lifecalendar.app</span>
-                </div>
-            </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
-                <h2 class="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-                <div class="space-y-6 text-sm">
-                    <div>
-                        <h3 class="font-semibold text-slate-200 mb-1">How is my data backed up?</h3>
-                        <p class="text-slate-400">Your data is stored securely using local storage and can sync with your cloud account if enabled.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-slate-200 mb-1">Can I reset my calendar settings?</h3>
-                        <p class="text-slate-400">Yes, you can customize your birthdate and preferences anytime in the app settings.</p>
-                    </div>
+            <!-- Contact -->
+            <section class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-xl font-semibold mb-3">Contact support</h2>
+                <p class="text-slate-400 text-sm mb-6 leading-relaxed">Found a bug, have a feature request, or need help with your account? Send us an email. We usually reply within 2 business days.</p>
+                <a href="mailto:support@lifecalendar.app?subject=Life%20Calendar%20Support"
+                   class="inline-flex items-center space-x-3 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-3 rounded-2xl font-semibold transition shadow-lg shadow-indigo-600/20 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/60">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>support@lifecalendar.app</span>
+                </a>
+                <p class="text-slate-500 text-xs mt-5 leading-relaxed">Reporting a bug? Please include your iPhone model, iOS version, the app version (Settings → About), and the steps that led to the problem.</p>
+            </section>
+
+            <!-- FAQ -->
+            <section class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-xl font-semibold mb-6">Frequently asked questions</h2>
+                <div class="divide-y divide-slate-800 text-sm">
+
+                    <details class="group py-4">
+                        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded">
+                            How is my data backed up?
+                            <svg class="chev w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <p class="text-slate-400 mt-3 leading-relaxed">Your data is stored on your device. If you sign in and turn on sync, it is also backed up to your cloud account so you can restore it on another device.</p>
+                    </details>
+
+                    <details class="group py-4">
+                        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded">
+                            How do I restore my data on a new iPhone?
+                            <svg class="chev w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <p class="text-slate-400 mt-3 leading-relaxed">Install Life Calendar on the new phone and sign in with the same Apple or Google account you used before. Your goals and notes will sync back automatically.</p>
+                    </details>
+
+                    <details class="group py-4">
+                        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded">
+                            Can I change my birthdate or other settings?
+                            <svg class="chev w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <p class="text-slate-400 mt-3 leading-relaxed">Yes. Open the app settings at any time to change your birthdate and preferences. Your weeks calendar updates right away.</p>
+                    </details>
+
+                    <details class="group py-4" id="delete-account">
+                        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded">
+                            How do I delete my account and data?
+                            <svg class="chev w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <p class="text-slate-400 mt-3 leading-relaxed">Open the app, go to Settings, and choose Delete account. This removes your account and all synced data. If you can't open the app, email us from the address linked to your account and we will delete it for you.</p>
+                    </details>
+
+                    <details class="group py-4">
+                        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded">
+                            What data does Life Calendar collect?
+                            <svg class="chev w-4 h-4 text-slate-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </summary>
+                        <p class="text-slate-400 mt-3 leading-relaxed">Only what the app needs to work: your sign-in details, the goals and notes you enter, and anonymous usage and crash data. Read the full details in our <a href="privacy.html" class="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">Privacy Policy</a>.</p>
+                    </details>
+
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
-    <footer class="border-t border-slate-900 py-12 text-center text-sm text-slate-500">
-        <p>&copy; 2026 Life Calendar. All rights reserved.</p>
+    <footer class="border-t border-slate-900 py-12 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Life Calendar. All rights reserved.</p>
+            <div class="flex items-center space-x-6">
+                <a href="support.html" class="hover:text-slate-300 transition">Support</a>
+                <a href="privacy.html" class="hover:text-slate-300 transition">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 
 </body>
